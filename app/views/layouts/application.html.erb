@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Readabilify</title>
-  <%= include_stylesheets :app %>
-  <%= include_javascripts :app %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+  <head>
+    <title>Readabilify</title>
+    <%= include_stylesheets :app %>
+    <%= include_javascripts :app %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
 
-<%= yield %>
+    <%= render partial: "shared/flash" %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
