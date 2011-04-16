@@ -1,0 +1,13 @@
+<% unless @titles %>
+  <%= link_to "Login with Readability", register_home_path %>
+<% else %>
+  <%= form_tag home_path, method: :get do |f| %>
+    <%= check_box_tag :show_archived %>
+    <%= submit_tag "Update" %>
+  <% end %>
+  <ul>
+    <% @titles.each do |article| %>
+      <li><%= article %></li>
+    <% end %>
+  </ul>
+<% end %>
