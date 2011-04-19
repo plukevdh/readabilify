@@ -24,7 +24,8 @@ class HomeController < ApplicationController
 
   def parse_options
     @options = "?"
-    @options += "archive=#{params[:show_archived] || 0}"
+    @options += "archive=#{params[:archive] ? 1 : 0}"
+    @options += "&favorite=#{params[:favorite] ? 1 : 0}"
   end
 
   def callback_url

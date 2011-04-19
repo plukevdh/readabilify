@@ -10,6 +10,9 @@ gem "mongoid", ">= 2.0.0.beta.19"
 gem "redis"
 gem "haml", ">= 3.0.0"
 gem "yajl-ruby"
+gem 'kaminari'
 
-gem 'oauth'
 gem 'prawn'
+gem 'oauth'
+gem 'readability-engine'
+
