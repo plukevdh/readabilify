@@ -1,15 +1,15 @@
-<% unless @titles %>
-  <%= link_to "Login with Readability", register_home_path %>
+<% unless @bookmarks %>
+  <%= link_to "Login with Readability", new_readability_session_path %>
 <% else %>
   <%= form_tag home_path, method: :get do |f| %>
-    <%= check_box_tag :archive, 'show', params[:archive] == 'show' %> Show Archived
-    <%= check_box_tag :favorite, 'show', params[:favorite] == 'show' %> Favorites
+    <%= check_box_tag :archive, '1', params[:archive] == '1' %> Show Archived
+    <%= check_box_tag :favorite, '1', params[:favorite] == '1' %> Favorites
     <br/>
     <%= submit_tag "Update" %>
   <% end %>
   <ul>
-    <% @titles.each do |article| %>
-      <li><%= article %></li>
+    <% @bookmarks.each do |article| %>
+      <li><%= article['article']['title'] %></li>
     <% end %>
   </ul>
 <% end %>

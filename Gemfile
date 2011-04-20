@@ -14,5 +14,5 @@ gem 'kaminari'
 
 gem 'prawn'
 gem 'oauth'
-gem 'readability-engine'
+gem 'readability-engine', require: 'readability'
 
