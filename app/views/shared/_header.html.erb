@@ -1,0 +1,11 @@
+<div id="header">
+  <div class="blurb">Readabilify - Powered and Empowering Readability</div>
+  <div class="access">
+    <% if !readabilified? %>
+      <%= link_to "Link", new_readability_session_path %>
+    <% else %>
+      <%= link_to "Unlink", readability_session_path, method: :destroy %>
+    <% end %>
+    Readability
+  </div>
+</div>
