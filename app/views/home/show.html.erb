@@ -17,21 +17,40 @@
   </div>
 
   <h2 class="special">Login with</h2>
-  <%= link_to image_tag("readability-sm.png"), new_readability_session_path, class: 'login' %>
-
+  <%= link_to image_tag("readability-sm.png"), new_readability_session_path, class: 'login button' %>
 
 <% else %>
-  <%= form_tag home_path, method: :get do |f| %>
-    <%= check_box_tag :archive, '1', params[:archive] == '1' %> Show Archived
-    <%= check_box_tag :favorite, '1', params[:favorite] == '1' %> Favorites
-    <br/>
-    <%= submit_tag "Update" %>
-  <% end %>
-  <ul>
-    <% @bookmarks.each do |article| %>
-      <li><%= article['article']['title'] %></li>
+  
+  <div class="filter">
+    Filter List
+    <%= form_tag home_path, method: :get do |f| %>
+      <ul>
+        <li><%= check_box_tag :archive, '1', params[:archive] == '1' %> Show Archived</li>
+        <li><%= check_box_tag :favorite, '1', params[:favorite] == '1' %> Favorites</li>
+      </ul>
+      <br/>
+      <%= submit_tag "Update", class: 'button' %>
     <% end %>
-  </ul>
+  </div>
+
+  <table class="article-list">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th class="filter-show"><a href="#"><%= image_tag "gear.png" %></a></th>
+      </tr>
+    </thead> 
+    <% @bookmarks.each do |article| %>
+      <tr>
+        <td class="titles"><%= article['article']['title'] %></td>
+        <td class="links">
+          <%= format_link(article, :pdf) %>
+          <%= format_link(article, :epub) %>
+          <%= format_link(article, :mobi) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
 
   <%= link_to "Disconnect from Readability", home_path, method: :delete %>
 <% end %>

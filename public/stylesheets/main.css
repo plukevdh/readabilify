@@ -1,3 +1,13 @@
+/* @override 
+	http://localhost:3000/stylesheets/main.css?1303478689
+	http://localhost:3000/stylesheets/main.css?1303479785
+	http://localhost:3000/stylesheets/main.css?1303480285
+	http://localhost:3000/stylesheets/main.css?1303480852
+	http://localhost:3000/stylesheets/main.css?1303481165
+	http://localhost:3000/stylesheets/main.css?1303481302
+	http://localhost:3000/stylesheets/main.css?1303481506
+*/
+
 h1 { 
   font-size: 30pt; 
   margin: 10px;
@@ -58,4 +68,74 @@ body {
 }
 #header .access {
 	float: right;
+}
+
+table.article-list thead {
+	background-color: #fff;
+	border: 1px #ddd solid;
+}
+
+table.article-list tr { 
+  text-align: left; 
+}
+
+table.article-list th,
+table.article-list td {
+  padding: 10px; 
+}
+table.article-list td.links {
+	width: 200px;
+}
+
+table.article-list td.links a, .button {
+  padding: 2px 8px;
+  font-size: 8pt; 
+  border: 1px #ddd solid;
+  margin-left: 10px;
+  
+  -moz-border-radius:20px;
+  -webkit-border-radius:20px;
+  border-radius:20px;
+  
+  background: #fff;
+  background: -moz-linear-gradient(bottom, #fff, #eee);
+  background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#eee));
+  background: -o-linear-gradient(bottom, #fff, #eee);
+  background: linear-gradient(bottom, #fff, #eee);
+  
+  -webkit-transition: all 0.3s ease;  -moz-transition: all 0.3s ease;  -o-transition: all 0.3s ease;   transition: all 0.3s ease;
+}
+
+.filter .button { 
+  padding: 4px 12px 6px; 
+}
+
+table.article-list td.links a:hover, .button:hover {
+  background: #eee;
+}
+
+table.article-list td.links a:active, .button:active {
+  background: #ddd;
+}
+table.article-list .filter-show { 
+  text-align: right; 
+}
+.filter {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #ddd; 
+	right: 60px;
+	width: 150px;
+} 
+.filter ul { 
+  margin: 20px 0 5px; 
+}
+.filter li { 
+  text-align: left; 
+  list-style-type: none; 
+}
+.filter .button {
+	margin: 0;
 }
