@@ -4,7 +4,7 @@
     <% if !readabilified? %>
       <%= link_to "Link", new_readability_session_path %>
     <% else %>
-      <%= link_to "Unlink", readability_session_path, method: :destroy %>
+      <%= link_to "Unlink", readability_session_path, method: :delete %>
     <% end %>
     Readability
   </div>

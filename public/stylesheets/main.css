@@ -6,6 +6,7 @@
 	http://localhost:3000/stylesheets/main.css?1303481165
 	http://localhost:3000/stylesheets/main.css?1303481302
 	http://localhost:3000/stylesheets/main.css?1303481506
+	http://localhost:3000/stylesheets/main.css?1303482665
 */
 
 h1 { 
@@ -104,6 +105,16 @@ table.article-list td.links a, .button {
   background: linear-gradient(bottom, #fff, #eee);
   
   -webkit-transition: all 0.3s ease;  -moz-transition: all 0.3s ease;  -o-transition: all 0.3s ease;   transition: all 0.3s ease;
+}
+.login.button {
+	display: inline-block;
+	height: 50px;
+	width: 150px;
+	line-height: 45px;
+	margin: 10px;
+}
+.login img { 
+	vertical-align: middle;
 }
 
 .filter .button { 

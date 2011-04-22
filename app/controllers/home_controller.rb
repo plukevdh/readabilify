@@ -1,7 +1,11 @@
 class HomeController < ApplicationController
   def show
-    @bookmarks = readability :bookmarks, {favorite: params[:favorite] || 0, 
-                                         archive: params[:archive] || 0} if readabilified?
+    return unless readabilified?
+
+    @bookmarks =  Kaminari.paginate_array(
+      readability(:bookmarks, {favorite: params[:favorite] || 0, 
+                               archive: params[:archive] || 0})
+      ).page(params[:page] || 1).per(15) 
   end
 
   def destroy
