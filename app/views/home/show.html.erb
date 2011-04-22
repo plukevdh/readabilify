@@ -1,5 +1,25 @@
 <% unless @bookmarks %>
-  <%= link_to "Login with Readability", new_readability_session_path %>
+
+  <h1 class="title special">Readabilify</h1>
+  <h3 class="subtitle special">Abilifying Readability</h3>
+
+  <div class="copy">
+    <p>
+      So you like Readability, right? Me to. But there's those times when I'd love to have copies of my saved articles in PDF, 
+      or other hard copy format, even let it sync to various offline locations so I can read them when I'm not connected. What to do?
+    </p>
+
+    <p>
+      Use Readabilify! We give your artcles legs to walk into any format and onto any device or easily re-formattable and printable 
+      hard copy! All you have to do is connect with your Readability account and <b>BOOM</b>, your artcles can go anywhere you can, 
+      however you want them to. All you have to do is...
+    </p>
+  </div>
+
+  <h2 class="special">Login with</h2>
+  <%= link_to image_tag("readability-sm.png"), new_readability_session_path, class: 'login' %>
+
+
 <% else %>
   <%= form_tag home_path, method: :get do |f| %>
     <%= check_box_tag :archive, '1', params[:archive] == '1' %> Show Archived
@@ -12,4 +32,6 @@
       <li><%= article['article']['title'] %></li>
     <% end %>
   </ul>
+
+  <%= link_to "Disconnect from Readability", home_path, method: :delete %>
 <% end %>

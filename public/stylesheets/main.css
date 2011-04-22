@@ -1,0 +1,34 @@
+h1 { 
+  font-size: 30pt; 
+  margin: 10px;
+} h2 {
+  font-size: 20pt;
+  margin: 8px; 
+  
+} h3 {
+  font-size: 18pt; 
+  margin: 5px;
+}
+
+h3.subtitle {
+  margin-bottom: 40px; 
+}
+
+body {
+	text-align: center;
+}
+
+.content {
+  padding: 20px; 
+  width: 60%;
+  margin: 0 auto;
+}
+
+.copy {
+  padding: 0 40px; 
+}
+
+.copy p {
+	display: block; 
+	margin-bottom: 20px;
+}

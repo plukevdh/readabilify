@@ -3,4 +3,5 @@ javascripts:
     - public/javascripts/*.js
 stylesheets:
   app:
-    - public/stylesheets/*.css
+    - public/stylesheets/reset.css
+    - public/stylesheets/main.css
