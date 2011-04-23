@@ -16,42 +16,43 @@
     </p>
   </div>
 
-  <h2 class="special">Login with</h2>
+  <h3 class="login-text special">Login with</h3>
   <%= link_to image_tag("readability-sm.png"), new_readability_session_path, class: 'login button' %>
 
 <% else %>
-  
-  <div class="filter">
-    Filter List
-    <%= form_tag home_path, method: :get do |f| %>
-      <ul>
-        <li><%= check_box_tag :archive, '1', params[:archive] == '1' %> Show Archived</li>
-        <li><%= check_box_tag :favorite, '1', params[:favorite] == '1' %> Favorites</li>
-      </ul>
-      <br/>
-      <%= submit_tag "Update", class: 'button' %>
-    <% end %>
-  </div>
+  <div class="result-group"> 
+    <div class="filter">
+      Filter List
+      <%= form_tag home_path, method: :get do |f| %>
+        <ul>
+          <li><%= check_box_tag :archive, '1', params[:archive] == '1' %> Show Archived</li>
+          <li><%= check_box_tag :favorite, '1', params[:favorite] == '1' %> Favorites</li>
+        </ul>
+        <br/>
+        <%= submit_tag "Update", class: 'button' %>
+      <% end %>
+    </div>
 
-  <table class="article-list">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th class="filter-show"><a href="#"><%= image_tag "gear.png" %></a></th>
-      </tr>
-    </thead> 
-    <% @bookmarks.each do |article| %>
-      <tr>
-        <td class="titles"><%= article['article']['title'] %></td>
-        <td class="links">
-          <%= format_link(article, :pdf) %>
-          <%= format_link(article, :epub) %>
-          <%= format_link(article, :mobi) %>
-        </td>
-      </tr>
-    <% end %>
-  </table>
-  <%= paginate @bookmarks %>
+    <table class="article-list">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th class="filter-show"><a href="#"><%= image_tag "gear.png" %></a></th>
+        </tr>
+      </thead> 
+      <% @bookmarks.each do |article| %>
+        <tr>
+          <td class="titles"><%= article['article']['title'] %></td>
+          <td class="links">
+            <%= format_link(article, :pdf) %>
+            <%= format_link(article, :epub) %>
+            <%= format_link(article, :mobi) %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+    <%= paginate @bookmarks %>
+  </div>
 
   <%= link_to "Disconnect from Readability", home_path, method: :delete %>
 <% end %>

@@ -1,17 +1,7 @@
-/* @override 
-	http://localhost:3000/stylesheets/main.css?1303478689
-	http://localhost:3000/stylesheets/main.css?1303479785
-	http://localhost:3000/stylesheets/main.css?1303480285
-	http://localhost:3000/stylesheets/main.css?1303480852
-	http://localhost:3000/stylesheets/main.css?1303481165
-	http://localhost:3000/stylesheets/main.css?1303481302
-	http://localhost:3000/stylesheets/main.css?1303481506
-	http://localhost:3000/stylesheets/main.css?1303482665
-*/
-
 h1 { 
-  font-size: 30pt; 
-  margin: 10px;
+  font-size: 45pt; 
+  margin: 10px; 
+  font-weight: bold; 
 } h2 {
   font-size: 20pt;
   margin: 8px; 
@@ -19,6 +9,11 @@ h1 {
 } h3 {
   font-size: 18pt; 
   margin: 5px;
+}
+
+
+.red {
+   color: #741f1c;
 }
 
 a {
@@ -33,13 +28,13 @@ h3.subtitle {
 body {
 	text-align: center;
 	background-color: #f8f8f5;
-	font-family: helvetica, sans-serif;
+	font-family: "minion-pro-1","minion-pro-2", Georgia, "Times New Roman", Times, serif; 
 }
 
 .content {
   padding: 20px; 
-  width: 60%;
   margin: 0 auto;
+  position: relative;
 }
 
 .copy {
@@ -48,7 +43,9 @@ body {
 
 .copy p {
 	display: block; 
-	margin-bottom: 20px;
+	margin: 20px auto 40px;
+	width: 700px;
+	text-align: center;
 }
 
 #header {
@@ -70,7 +67,10 @@ body {
 #header .access {
 	float: right;
 }
-
+table.article-list {
+  width: 800px;
+  min-width: 800px;
+}
 table.article-list thead {
 	background-color: #fff;
 	border: 1px #ddd solid;
@@ -131,13 +131,21 @@ table.article-list td.links a:active, .button:active {
 table.article-list .filter-show { 
   text-align: right; 
 }
+
+.result-group { 
+  margin: 20px auto; 
+  position: relative;
+  width: 800px;
+}
+
 .filter {
 	display: none;
 	position: absolute;
 	background-color: #fff;
 	padding: 20px;
 	border: 1px solid #ddd; 
-	right: 60px;
+	right: 0;
+	top: 40px;
 	width: 150px;
 } 
 .filter ul { 
