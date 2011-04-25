@@ -14,5 +14,6 @@ gem 'kaminari'
 
 gem 'prawn'
 gem 'oauth'
-gem 'readability-engine', require: 'readability'
+gem 'readability-engine', require: 'readability', path: '~/Code/Ruby/readability'
 
+gem 'bookit', path: '~/Code/Ruby/bookit'

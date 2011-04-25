@@ -1,8 +1,11 @@
 class ArticlesController < ApplicationController
-  respond_to :pdf, :epub, :mobi
-
   def show
-    article = readability :articles, {article: params[:id]}
-    respond_with(article)
+    article = readability :articles, {id: params[:id]}
+
+    output = Bookit::Article.new article
+
+    respond_to do |format|
+      format.pdf { send_file article.to_pdf }
+    end
   end
 end

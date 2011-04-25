@@ -1,3 +1,18 @@
+PATH
+  remote: ~/Code/Ruby/bookit
+  specs:
+    bookit (0.0.1)
+      eeepub
+      prawn
+      redis
+
+PATH
+  remote: ~/Code/Ruby/readability
+  specs:
+    readability-engine (0.0.7)
+      oauth
+      yajl-ruby
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -43,9 +58,11 @@ GEM
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
+    eeepub (0.6.1)
+      builder
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    haml (3.0.25)
+    haml (3.1.0)
     i18n (0.5.0)
     jammit (0.6.0)
       closure-compiler (>= 0.1.0)
@@ -71,7 +88,7 @@ GEM
     oauth (0.4.4)
     open4 (1.0.1)
     orm_adapter (0.0.4)
-    pdf-reader (0.9.1)
+    pdf-reader (0.9.2)
       Ascii85 (>= 0.9)
     polyglot (0.3.1)
     prawn (0.11.1)
@@ -96,9 +113,6 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
-    readability-engine (0.0.4)
-      oauth
-      yajl-ruby
     redis (2.2.0)
     thor (0.14.6)
     treetop (1.4.9)
@@ -116,6 +130,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bookit!
   bson_ext
   devise
   haml (>= 3.0.0)
@@ -126,6 +141,6 @@ DEPENDENCIES
   oauth
   prawn
   rails (= 3.0.6)
-  readability-engine
+  readability-engine!
   redis
   yajl-ruby
