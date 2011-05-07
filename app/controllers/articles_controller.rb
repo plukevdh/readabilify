@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       format.pdf { send_data output.to_print.render, filename: "#{output.title}.pdf" }
+      format.epub { send_data output.to_print.render, filename: "#{output.title}.epub" }
     end
   end
 end
