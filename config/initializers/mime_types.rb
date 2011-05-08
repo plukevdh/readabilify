@@ -6,3 +6,4 @@
 
 Mime::Type.register "application/pdf", :pdf
 Mime::Type.register "application/epub+zip", :epub
+Mime::Type.register "application/epub+zip", :mobi

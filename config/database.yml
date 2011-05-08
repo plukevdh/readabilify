@@ -1,0 +1,10 @@
+development: &DEFAULT
+  adapter: postgresql
+  database: readability_dev
+
+test: 
+  <<: *DEFAULT
+
+production:
+  adapter: postgresql
+  database: readability_prod

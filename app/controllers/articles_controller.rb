@@ -13,8 +13,9 @@ class ArticlesController < ApplicationController
     filename = output.title.downcase.split(' ')[0..4].each {|w| w.gsub!(/\W/, '')}.join('-')
 
     respond_to do |format|
-      format.pdf { send_data output.to_print.render, filename: "#{filename}.pdf" }
-      format.epub { send_data output.to_print.render, filename: "#{filename}.epub" }
+      format.pdf { send_data output.to_print(Bookit::Emitter::Pdf).render, filename: "#{filename}.pdf" }
+      format.epub { send_data output.to_print(Bookit::Emitter::Epub).render, filename: "#{filename}.epub" }
+      format.mobi { send_data output.to_print(Bookit::Emitter::Epub).render, filename: "#{filename}.mobi" }
     end
   end
 end

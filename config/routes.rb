@@ -1,6 +1,4 @@
 Readabilify::Application.routes.draw do
-  devise_for :users
-
   resource :home, controller: 'home'
   resources :articles
 

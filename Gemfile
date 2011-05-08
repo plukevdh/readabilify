@@ -2,11 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.0'
 
-gem "devise"
+gem "pg"
 gem "jammit"
 gem "jquery-rails"
-gem "bson_ext"
-gem "mongoid", ">= 2.0.0.beta.19"
 gem "redis"
 gem "haml", ">= 3.0.0"
 gem "yajl-ruby"
@@ -16,3 +14,4 @@ gem 'oauth'
 gem 'readability-engine', require: 'readability'
 
 gem 'bookit' #, path: '~/Code/Ruby/bookit'
+gem 'eeepub', git: "git://github.com/plukevdh/eeepub.git"
