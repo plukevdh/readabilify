@@ -9,10 +9,12 @@ class ArticlesController < ApplicationController
       url: article[:url],
       title: article[:title]
     }, Bookit::Parser::Html)
+    
+    filename = output.title.downcase.split(' ')[0..4].each {|w| w.gsub!(/\W/, '')}.join('-')
 
     respond_to do |format|
-      format.pdf { send_data output.to_print.render, filename: "#{output.title}.pdf" }
-      format.epub { send_data output.to_print.render, filename: "#{output.title}.epub" }
+      format.pdf { send_data output.to_print.render, filename: "#{filename}.pdf" }
+      format.epub { send_data output.to_print.render, filename: "#{filename}.epub" }
     end
   end
 end
