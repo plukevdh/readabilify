@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
+gem 'rails', '~> 3.0'
 
 gem "devise"
 gem "jammit"
@@ -12,8 +12,7 @@ gem "haml", ">= 3.0.0"
 gem "yajl-ruby"
 gem 'kaminari'
 
-gem 'prawn'
 gem 'oauth'
-gem 'readability-engine', require: 'readability', path: '~/Code/Ruby/readability'
+gem 'readability-engine', require: 'readability'
 
-gem 'bookit', path: '~/Code/Ruby/bookit'
+gem 'bookit' #, path: '~/Code/Ruby/bookit'
