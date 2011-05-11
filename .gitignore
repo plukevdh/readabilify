@@ -12,3 +12,4 @@ tmp/
 .idea/vcs.xml
 .idea/workspace.xml
 public/javascripts/.DS_Store
+.DS_Store
