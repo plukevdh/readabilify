@@ -13,5 +13,5 @@ gem 'kaminari'
 gem 'oauth'
 gem 'readability-engine', require: 'readability'
 
-gem 'bookit' #, path: '~/Code/Ruby/bookit'
-gem 'eeepub', git: "git://github.com/plukevdh/eeepub.git"
+gem 'bookit', '~> 0.2' #, path: '~/Code/Ruby/bookit'
+gem 'eeepub', git: "git://github.com/plukevdh/eeepub.git" # path: '~/Code/Ruby/eeepub 

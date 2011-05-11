@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/plukevdh/eeepub.git
-  revision: d3ae904d5286a902c7810fe8366fc54746e141c7
+  revision: 7d044de5de1b85af3673a60ea93879cf46fa9584
   specs:
     eeepub (0.7.0)
       builder
@@ -42,7 +42,7 @@ GEM
       activesupport (= 3.0.7)
     activesupport (3.0.7)
     arel (2.0.9)
-    bookit (0.1.0)
+    bookit (0.2.0)
       eeepub
       nokogiri
       prawn
@@ -114,7 +114,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bookit
+  bookit (~> 0.2)
   eeepub!
   haml (>= 3.0.0)
   jammit
