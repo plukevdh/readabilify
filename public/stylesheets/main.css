@@ -54,7 +54,7 @@ body {
 	display: block; 
 	margin: 20px auto 40px;
 	width: 700px;
-	text-align: left;
+  text-align: center;
 }
 
 .copy .box {
@@ -62,17 +62,18 @@ body {
   min-height: 120px;
   display: inline-block;
   width: 35%;
-  background-color: #fff;
   padding: 10px;
-  border: 1px solid #ddd;
 
   position: relative;
 }
 
 .copy img {
+  padding-bottom: 20px;
+}
+.copy .arrow {
   position: relative;
   z-index: 10;
-  margin: 65px -10px 0 -10px;
+  margin: 125px -10px 0 -10px;
   opacity: 0.6;
   
   -webkit-transition: all 0.3s ease;  
@@ -120,6 +121,9 @@ body {
   height: 20px;
   line-height: 20px;
 }  
+.push {
+  height: 41px;
+}
 #footer .blurb {
   float:left;
 }
@@ -247,16 +251,6 @@ table.article-list .filter-show {
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 10px;
-}
-.page {
-  padding-left: 4px;
-}
-.page.current {
-  background-color: #d5d5d2;
-    
-  -moz-border-radius:20px;
-  -webkit-border-radius:20px;
-  border-radius:20px;
 }
 .pagination .first, .pagination .last {
   display: none;

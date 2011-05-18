@@ -5,19 +5,19 @@
 
   <div class="copy">
     <p class="box">
-      <span class="title">A Problem</span>
-      So you like Readability, right? Me too. But there are those times when I'd love to have copies of my saved articles in PDF, 
-      or other hard copy format. Maybe I'd even like to let it sync to various offline locations/e-readers so I can read them when 
-      I'm not connected. What to do?
+      <span class="title">Go from...</span>
+      <%= image_tag "reading-list.jpg" %>
+      <br/>
+      I'm inna browser.
     </p>
 
-    <%= image_tag "right-arrow.png" %>
+    <%= image_tag "right-arrow.png", class: 'arrow' %>
 
     <p class="box">
-      <span class="title">A Solution</span>
-      Use Readabilify! We give your artcles legs to walk into any format and onto any device or easily re-formattable and printable 
-      hard copy! All you have to do is connect with your Readability account and <b>BOOM</b>, your artcles can go anywhere you can, 
-      however you want them to. All you have to do is...
+      <span class="title">To...</span>
+      <%= image_tag "types.png" %>
+      <br/>
+      Format freedom.
     </p>
   </div>
 
@@ -45,7 +45,7 @@
       <thead>
         <tr>
           <th>Title</th>
-          <th class="filter-show"><a href="#"><%= image_tag "gear.png" %></a></th>
+          <th class="filter-show"><a href="#" title="Filters"><%= image_tag "gear.png" %></a></th>
         </tr>
       </thead> 
       <% @bookmarks.each do |article| %>
