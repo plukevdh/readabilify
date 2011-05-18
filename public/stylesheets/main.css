@@ -38,9 +38,12 @@ body {
 }
 
 .content {
-  padding: 20px; 
   margin: 0 auto;
   position: relative;
+  min-height: 100%;
+	height: auto !important;
+  height: 100%;
+  margin-bottom: -41px;
 }
 
 .copy {
@@ -51,7 +54,42 @@ body {
 	display: block; 
 	margin: 20px auto 40px;
 	width: 700px;
-	text-align: center;
+	text-align: left;
+}
+
+.copy .box {
+  vertical-align: top;
+  min-height: 120px;
+  display: inline-block;
+  width: 35%;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+
+  position: relative;
+}
+
+.copy img {
+  position: relative;
+  z-index: 10;
+  margin: 65px -10px 0 -10px;
+  opacity: 0.6;
+  
+  -webkit-transition: all 0.3s ease;  
+  -moz-transition: all 0.3s ease;  
+  -o-transition: all 0.3s ease;   
+  transition: all 0.3s ease;  
+}
+.copy img:hover {
+  opacity: 1.0;
+}
+
+
+.copy .box .title {
+  font-weight: bold;
+  font-size: 16pt;
+  position: absolute;
+  top: -25px;
 }
 
 #header, #footer {
@@ -154,8 +192,13 @@ table.article-list td.links a, .button {
 	vertical-align: middle;
 }
 
-.login-text {
-  margin-bottom: 20px;
+.login-text.special {
+line-height: 12pt;
+font-size: 12pt;
+padding: 0;
+margin-bottom: -20px;
+margin-top: 12px;
+color: #000;
 }
 
 .filter .button { 
@@ -199,3 +242,23 @@ table.article-list .filter-show {
 .filter .button {
 	margin: 0;
 }
+
+.pagination {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.page {
+  padding-left: 4px;
+}
+.page.current {
+  background-color: #d5d5d2;
+    
+  -moz-border-radius:20px;
+  -webkit-border-radius:20px;
+  border-radius:20px;
+}
+.pagination .first, .pagination .last {
+  display: none;
+}
+

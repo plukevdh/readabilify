@@ -4,20 +4,28 @@
   <h3 class="subtitle special">Abilifying Readability</h3>
 
   <div class="copy">
-    <p>
-      So you like Readability, right? Me to. But there's those times when I'd love to have copies of my saved articles in PDF, 
-      or other hard copy format, even let it sync to various offline locations so I can read them when I'm not connected. What to do?
+    <p class="box">
+      <span class="title">A Problem</span>
+      So you like Readability, right? Me too. But there are those times when I'd love to have copies of my saved articles in PDF, 
+      or other hard copy format. Maybe I'd even like to let it sync to various offline locations/e-readers so I can read them when 
+      I'm not connected. What to do?
     </p>
 
-    <p>
+    <%= image_tag "right-arrow.png" %>
+
+    <p class="box">
+      <span class="title">A Solution</span>
       Use Readabilify! We give your artcles legs to walk into any format and onto any device or easily re-formattable and printable 
       hard copy! All you have to do is connect with your Readability account and <b>BOOM</b>, your artcles can go anywhere you can, 
       however you want them to. All you have to do is...
     </p>
   </div>
 
-  <h4 class="login-text special">Login with</h4>
-  <%= link_to image_tag("readability-logo.png"), new_readability_session_path, class: 'login button' %>
+  <%= link_to new_readability_session_path, class: 'login button' do %>
+    <h4 class="login-text special">Login with</h4>
+    <%= image_tag("readability-logo.png") %>
+  <% end %>
+
 
 <% else %>
   <div class="result-group"> 

@@ -12,10 +12,9 @@
   </head>
   <body>
 
-    <%= render partial: "shared/header" %>
-    <%= render partial: "shared/flash" %>
-
     <div class="content">
+      <%= render partial: "shared/header" %>
+      <%= render partial: "shared/flash" %>
       <%= yield %>
     </div>
 
