@@ -9,6 +9,10 @@ gem "jquery-rails"
 gem "yajl-ruby"
 gem 'kaminari'
 
+gem 'redis'
+gem "eventmachine"
+gem "em-websocket", "~> 0.3.0" 
+
 gem 'oauth'
 gem 'readability-engine', require: 'readability'
 
