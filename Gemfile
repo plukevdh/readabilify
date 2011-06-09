@@ -2,11 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.0'
 
-gem "pg"
+gem "mongoid", "~> 2.0"
+gem "bson_ext", "~> 1.3"
 gem "jammit"
 gem "jquery-rails"
-gem "redis"
-gem "haml", ">= 3.0.0"
 gem "yajl-ruby"
 gem 'kaminari'
 
@@ -15,5 +14,5 @@ gem 'readability-engine', require: 'readability'
 
 gem 'zipruby'
 
-gem 'bookit', '~> 2' # path: '~/Code/Projects/readability/bookit'
+gem 'bookit', '~> 0.2' # path: '~/Code/Projects/readability/bookit'
 gem 'eeepub', git: "git://github.com/plukevdh/eeepub.git"
