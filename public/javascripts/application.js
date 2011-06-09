@@ -34,26 +34,12 @@ $(document).ready(function(){
 
   $('#mass-convert a').click(function(e) {
     e.preventDefault();
-    var ids = _.map($('.article-list input[type="checkbox"]:checked'), function(ck) { return $(ck).val() });
+    $('#mass-convert').hide();
+    $('#generating').fadeIn();
 
-    $.ajax({
-      type: 'post',
-      url: $(this).attr('href'),
-      data: { check: ids },
-      beforeSend: function() {
-        $('#mass-convert').hide();
-        $('#generating').fadeIn();
-      }, 
-      success: function(link) {
-        $('#generating').hide();
-        $('#link').html("<h3><a href='/"+link+"'>Download!</a></h3>");
-      },
-      error: function() {
-        $('#mass-convert').show();
-        $('#generating').hide();
-      }
-    });
-
+    var $form = $('#mass-download').
+      attr('action', $(this).attr('href')).
+      submit();
   });
 
 });

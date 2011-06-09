@@ -20,11 +20,11 @@ class ArticlesController < ApplicationController
   end
   
   def mass_convert
-    files = []
+    files = {}
     emitter = "Bookit::Emitter::#{params[:format].capitalize}".constantize
     user = readability(:users, {id: '_current'}).to_options[:username]
 
-    params[:check].each do |aid|
+    params[:article].each do |aid|
       article = readability(:articles, {id: aid}).to_options
 
       output = Bookit::Article.new({
@@ -36,17 +36,15 @@ class ArticlesController < ApplicationController
       }, Bookit::Parser::Html)
 
       filename = output.title.downcase.split(' ')[0..4].each {|w| w.gsub!(/\W/, '')}.join('-')
-      files << output.to_print(emitter).save("tmp/docs/#{filename}.#{params[:format]}")
+      files[filename] = output.to_print(emitter)
     end
 
-    filename = "zips/#{user}-reading-list.zip"
-
-    zip = Zip::Archive.open("public/#{filename}", Zip::CREATE) do |ar|
-      files.each do |f|
-        ar.add_file(f.path)
+    zip = Zip::Archive.open_buffer(Zip::CREATE) do |ar|
+      files.each do |name, file|
+        ar.add_buffer("#{name}.#{params[:format]}", file.render)
       end
     end
     
-    render text: filename
+    send_data zip, filename: "#{user}-reading-list.zip"
   end
 end

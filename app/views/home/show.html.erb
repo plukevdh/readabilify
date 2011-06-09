@@ -48,26 +48,28 @@
       <% end %>
     </div>
 
-    <table class="article-list">
-      <thead>
-        <tr>
-          <th><%= check_box_tag :all %>
-          <th>Title</th>
-          <th class="filter-show"><a href="#" title="Filters"><%= image_tag "gear.png" %></a></th>
-        </tr>
-      </thead> 
-      <% @bookmarks.each do |article| %>
-        <tr>
-          <td class="check"><%= check_box :article, :id, {}, article['article']['id'] %></td>
-          <td class="titles"><%= article['article']['title'] %></td>
-          <td class="links">
-            <%= format_link(article, :pdf) %>
-            <%= format_link(article, :epub) %>
-            <%= format_link(article, :mobi) %>
-          </td>
-        </tr>
-      <% end %>
-    </table>
+    <%= form_tag mass_convert_articles_path, id: "mass-download" do |f| %>
+      <table class="article-list">
+        <thead>
+          <tr>
+            <th><%= check_box_tag :all %>
+            <th>Title</th>
+            <th class="filter-show"><a href="#" title="Filters"><%= image_tag "gear.png" %></a></th>
+          </tr>
+        </thead> 
+        <% @bookmarks.each do |article| %>
+          <tr>
+            <td class="check"><%= check_box_tag 'article[]', article['article']['id'] %></td>
+            <td class="titles"><%= article['article']['title'] %></td>
+            <td class="links">
+              <%= format_link(article, :pdf) %>
+              <%= format_link(article, :epub) %>
+              <%= format_link(article, :mobi) %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
     <%= paginate @bookmarks %>
   </div>
 <% end %>
