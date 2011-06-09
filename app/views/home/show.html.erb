@@ -3,31 +3,33 @@
   <h1 class="title special">Readabilify</h1>
   <h3 class="subtitle special">Abilifying Readability</h3>
 
-  <div class="copy">
-    <p class="box">
-      <span class="title">Go from...</span>
-      <%= image_tag "reading-list.jpg" %>
-      <br/>
-      I'm inna browser.
-    </p>
-
-    <%= image_tag "right-arrow.png", class: 'arrow' %>
-
-    <p class="box">
-      <span class="title">To...</span>
-      <%= image_tag "types.png" %>
-      <br/>
-      Format freedom.
-    </p>
-  </div>
-
   <%= link_to new_readability_session_path, class: 'login button' do %>
     <h4 class="login-text special">Login with</h4>
     <%= image_tag("readability-logo.png") %>
   <% end %>
 
+  <div class="copy">
+    <p class="box">
+      <span class="title">And go from "I'm inna browser."</span> 
+      <%= image_tag "reading-list.png" %>
+    </p>
+
+    <%= image_tag "right-arrow.png", class: 'arrow' %>
+
+    <p class="box">
+      <span class="title">To format freedom.</span>
+      <%= image_tag "types.png" %>
+      <br/>
+    </p>
+  </div>
 
 <% else %>
+  <div id="mass-convert" style="display:none">
+    <%= link_to "PDF", mass_convert_articles_path(format: :pdf), class: 'button large' %>
+    <%= link_to "EPUB", mass_convert_articles_path(format: :epub), class: 'button large' %>
+    <%= link_to "MOBI", mass_convert_articles_path(format: :mobi), class: 'button large' %>
+  </div>
+
   <div class="result-group"> 
     <div class="filter">
       Filter List
@@ -44,12 +46,14 @@
     <table class="article-list">
       <thead>
         <tr>
+          <th><%= check_box_tag :all %>
           <th>Title</th>
           <th class="filter-show"><a href="#" title="Filters"><%= image_tag "gear.png" %></a></th>
         </tr>
       </thead> 
       <% @bookmarks.each do |article| %>
         <tr>
+          <td class="check"><%= check_box :article, :id, {}, article['article']['id'] %></td>
           <td class="titles"><%= article['article']['title'] %></td>
           <td class="links">
             <%= format_link(article, :pdf) %>

@@ -47,9 +47,8 @@ body {
 }
 
 .copy {
-  padding: 0 40px; 
+  padding-top: 20px;
 }
-
 .copy p {
 	display: block; 
 	margin: 20px auto 40px;
@@ -67,9 +66,6 @@ body {
   position: relative;
 }
 
-.copy img {
-  padding-bottom: 20px;
-}
 .copy .arrow {
   position: relative;
   z-index: 10;
@@ -89,8 +85,8 @@ body {
 .copy .box .title {
   font-weight: bold;
   font-size: 16pt;
-  position: absolute;
-  top: -25px;
+  margin-bottom: 25px;
+  display: block;
 }
 
 #header, #footer {
@@ -185,6 +181,10 @@ table.article-list td.links a, .button {
   -o-transition: all 0.3s ease;   
   transition: all 0.3s ease;
 }
+.button.large {
+  font-size: 12pt;
+  padding: 12px 20px;
+}
 .login.button {
 	display: inline-block;
 	height: 75px;
@@ -255,4 +255,13 @@ table.article-list .filter-show {
 .pagination .first, .pagination .last {
   display: none;
 }
+#mass-convert {
+  margin-top: 12px;
+}
+#mass-convert a {
 
+  -moz-border-radius: 0 0 20px 20px;
+  -webkit-border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
+
+}
