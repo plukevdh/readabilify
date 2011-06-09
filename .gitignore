@@ -8,3 +8,4 @@ public/javascripts/.DS_Store
 tags
 public/images/*.psd
 public/zips/*
+config/database.yml
