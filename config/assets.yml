@@ -8,9 +8,11 @@ javascripts:
     - public/javascripts/jquery.min.js
     - public/javascripts/jquery-ui.min.js
     - public/javascripts/rails.js
+    - public/javascripts/socket.io/socket.io.min.js
     - public/javascripts/underscore-min.js
     - public/javascripts/jquery.tipsy.js
     - public/javascripts/application.js
+    - public/javascripts/messaging.js
 stylesheets:
   app:
     - public/stylesheets/reset.css
