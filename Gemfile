@@ -15,5 +15,5 @@ gem 'readability-engine', require: 'readability'
 
 gem 'zipruby'
 
-gem 'bookit', path: '~/Code/Ruby/bookit'
+gem 'bookit', '~> 2' # path: '~/Code/Projects/readability/bookit'
 gem 'eeepub', git: "git://github.com/plukevdh/eeepub.git"

@@ -6,6 +6,15 @@ GIT
       builder
       zipruby
 
+PATH
+  remote: ~/Code/Projects/readability/bookit
+  specs:
+    bookit (0.2.0)
+      eeepub
+      nokogiri
+      prawn
+      redis
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -42,11 +51,6 @@ GEM
       activesupport (= 3.0.7)
     activesupport (3.0.7)
     arel (2.0.9)
-    bookit (0.2.0)
-      eeepub
-      nokogiri
-      prawn
-      redis
     builder (2.1.2)
     closure-compiler (1.1.1)
     erubis (2.6.6)
@@ -114,7 +118,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bookit (~> 0.2)
+  bookit!
   eeepub!
   haml (>= 3.0.0)
   jammit
@@ -126,3 +130,4 @@ DEPENDENCIES
   readability-engine
   redis
   yajl-ruby
+  zipruby

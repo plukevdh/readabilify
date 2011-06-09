@@ -24,10 +24,15 @@
   </div>
 
 <% else %>
+  <div id="generating" style="display:none">
+    <h3>Generating <%= image_tag "load.gif" %></h3>
+  </div>
   <div id="mass-convert" style="display:none">
     <%= link_to "PDF", mass_convert_articles_path(format: :pdf), class: 'button large' %>
     <%= link_to "EPUB", mass_convert_articles_path(format: :epub), class: 'button large' %>
     <%= link_to "MOBI", mass_convert_articles_path(format: :mobi), class: 'button large' %>
+  </div>
+  <div id="link">
   </div>
 
   <div class="result-group"> 

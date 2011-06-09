@@ -8,6 +8,7 @@ javascripts:
     - public/javascripts/jquery.min.js
     - public/javascripts/jquery-ui.min.js
     - public/javascripts/rails.js
+    - public/javascripts/underscore-min.js
     - public/javascripts/jquery.tipsy.js
     - public/javascripts/application.js
 stylesheets:

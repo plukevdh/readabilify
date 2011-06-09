@@ -263,5 +263,9 @@ table.article-list .filter-show {
   -moz-border-radius: 0 0 20px 20px;
   -webkit-border-radius: 0 0 20px 20px;
   border-radius: 0 0 20px 20px;
-
 }
+#generating img {
+  margin-bottom: -6px;
+  padding-top: 10px;
+}
+
