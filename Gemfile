@@ -10,8 +10,9 @@ gem "yajl-ruby"
 gem 'kaminari'
 
 gem 'redis'
-gem "eventmachine"
-gem "em-websocket", "~> 0.3.0" 
+gem 'em-redis', require: false
+gem "eventmachine", require: false
+gem "em-websocket", "~> 0.3.0" , require: false
 
 gem 'oauth'
 gem 'readability-engine', require: 'readability'

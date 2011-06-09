@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   def show
     return unless readabilified?
 
+    @user = readability(:users, {id: '_current'})['username']
     @bookmarks =  Kaminari.paginate_array(
       readability(:bookmarks, {favorite: params[:favorite] || 0, 
                                archive: params[:archive] || 0})

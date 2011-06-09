@@ -24,6 +24,9 @@
   </div>
 
 <% else %>
+  <script>
+    window.whoami = {user: '<%= @user %>'}
+  </script>
   <div id="generating" style="display:none">
     <h3>Generating <%= image_tag "load.gif" %></h3>
   </div>

@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
       end
     end
     
-    ::REDIS.publish("readit", {command: "DL"})
+    ::REDIS.lpush("readit", {command: "DL", args: {user: user}})
     send_data zip, filename: "#{user}-reading-list.zip"
   end
 end
