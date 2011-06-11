@@ -1,7 +1,7 @@
 $(function() {
   var events = $({});
 
-  var socket = new io.Socket('localhost', {port: 3001, reconnect: true});
+  var socket = new io.Socket('localhost', {port: 3001, reconnect: true, rememberTransport: false});
   socket.connect();
   socket.on('connect', function(){
     console.log('connected');
