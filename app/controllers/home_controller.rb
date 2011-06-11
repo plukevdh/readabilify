@@ -13,4 +13,8 @@ class HomeController < ApplicationController
     reset_session
     redirect_to root_path, notice: "You have logged out of Readability."
   end
+  
+  def clean
+    redirect_to root_path
+  end
 end
