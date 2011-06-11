@@ -9,3 +9,5 @@ tags
 public/images/*.psd
 public/zips/*
 config/database.yml
+
+node_modules

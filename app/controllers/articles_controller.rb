@@ -41,11 +41,11 @@ class ArticlesController < ApplicationController
 
     zip = Zip::Archive.open_buffer(Zip::CREATE) do |ar|
       files.each do |name, file|
-        ar.add_buffer("#{name}.#{params[:format]}", file.render)
+        ar.add_buffer("#{name}.#{params[:format]}", file.render) unless file.nil?
       end
     end
     
-    ::REDIS.lpush("readit", {command: "DL", args: {user: user}})
+    ::REDIS.publish("notify:download", {user: user}.to_json)
     send_data zip, filename: "#{user}-reading-list.zip"
   end
 end
