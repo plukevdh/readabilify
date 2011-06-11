@@ -63,7 +63,7 @@
         <% @bookmarks.each do |article| %>
           <tr>
             <td class="check"><%= check_box_tag 'article[]', article['article']['id'] %></td>
-            <td class="titles"><%= article['article']['title'] %></td>
+            <td class="titles"><%= article['article']['title'].html_safe %></td>
             <td class="links">
               <%= format_link(article, :pdf) %>
               <%= format_link(article, :epub) %>
