@@ -19,6 +19,3 @@ gem 'zipruby'
 gem 'bookit', '~> 0.2' # path: '~/Code/Projects/readability/bookit'
 gem 'eeepub', git: "git://github.com/plukevdh/eeepub.git"
 
-group :development do
-  gem 'ruby-debug19', require: 'ruby-debug'
-end
